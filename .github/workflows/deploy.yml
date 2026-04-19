@@ -29,8 +29,18 @@ jobs:
           xcodebuild docbuild \
             -scheme SwiftCourse \
             -destination 'platform=macOS' \
-            -derivedDataPath ./DerivedData \
-            OTHER_DOCC_FLAGS="--transform-for-static-hosting --hosting-base-path SwiftCourses --output-path docs"
+            -derivedDataPath ./DerivedData 2>&1 | tail -20
+
+          find ./DerivedData -name "*.doccarchive" -print
+
+      - name: Convert to static site
+        run: |
+          ARCHIVE=$(find ./DerivedData -name "*.doccarchive" | head -1)
+          echo "Found archive: $ARCHIVE"
+          xcrun docc process-archive transform-for-static-hosting \
+            "$ARCHIVE" \
+            --hosting-base-path SwiftCourses \
+            --output-path docs
 
       - name: Fix permissions
         run: chmod -R 755 docs
