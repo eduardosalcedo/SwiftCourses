@@ -19,19 +19,16 @@
             **Toolbar** (top), and **Debug Area** (bottom).
             Knowing each area makes you faster and more confident.
 
-            @Image(source: "xcode-interface-annotated.png", alt: "Annotated Xcode interface with five areas labeled")
         }
 
         @Steps {
             @Step {
                 Open your `HelloSwift` project. Press **⌘1** to open the Project Navigator.
                 This is where you browse all files in your project.
-                @Image(source: "project-navigator.png", alt: "Project Navigator panel")
             }
             @Step {
                 Press **⌘0** to hide/show the Navigator. Press **⌥⌘0** to hide/show the Inspector.
                 Use these to maximize your editing space.
-                @Image(source: "xcode-panels.png", alt: "Xcode with navigator hidden for more editing space")
             }
             @Step {
                 Click `ContentView.swift` to open it in the **Editor**.
@@ -41,18 +38,15 @@
             @Step {
                 With a SwiftUI file open, open the **Library** (+ button in the toolbar
                 or **⇧⌘L**) to browse and drag in pre-built views and modifiers.
-                @Image(source: "xcode-library.png", alt: "Xcode Library panel with SwiftUI views")
             }
             @Step {
                 Use **Interface Builder** by adding a `.storyboard` file or by
                 clicking **Open in Interface Builder** if present.
                 For SwiftUI projects, the Canvas *is* the visual editor.
-                @Image(source: "interface-builder.png", alt: "Interface Builder canvas with a view controller")
             }
             @Step {
                 Press **⌘⇧0** (or click **Help → Developer Documentation**) to open
                 the built-in documentation browser. Search for any Swift type or modifier.
-                @Image(source: "developer-docs.png", alt: "Xcode Developer Documentation browser")
             }
         }
     }
@@ -67,30 +61,25 @@
             **iOS Simulator** (no device needed) or on a **real iPhone or iPad**
             (requires an Apple ID and developer profile).
 
-            @Image(source: "run-destinations.png", alt: "Xcode run destination selector showing Simulator and device options")
         }
 
         @Steps {
             @Step {
                 Click the **scheme/destination** selector in the Toolbar (next to the ▶ button).
                 Choose an **iPhone Simulator** model from the list.
-                @Image(source: "simulator-picker.png", alt: "Simulator model picker dropdown")
             }
             @Step {
                 Press **⌘R** (or click ▶) to build and run.
                 The Simulator launches and your app appears. Try interacting with it.
-                @Image(source: "simulator-running.png", alt: "iOS Simulator with app running")
             }
             @Step {
                 To run on a **real device**, connect your iPhone via USB.
                 Select it from the destination picker. If prompted, trust the Mac on your iPhone
                 and add your Apple ID under **Xcode → Settings → Accounts**.
-                @Image(source: "device-connected.png", alt: "Real iPhone selected as run destination")
             }
             @Step {
                 Press **⌘R**. Xcode signs the app and installs it on your device.
                 The app icon appears on your iPhone's Home Screen.
-                @Image(source: "app-on-device.png", alt: "App running on a real iPhone")
             }
         }
     }
@@ -104,30 +93,25 @@
             When your app behaves unexpectedly, Xcode's debugger helps you
             pause execution, inspect values, and step through code line by line.
 
-            @Image(source: "debugger-overview.png", alt: "Xcode Debug Area with variables and controls")
         }
 
         @Steps {
             @Step {
                 Click in the **gutter** (the grey area to the left of line numbers)
                 to set a **breakpoint**. A blue arrow appears. Run the app — it pauses here.
-                @Image(source: "breakpoint-set.png", alt: "Blue breakpoint arrow in the gutter")
             }
             @Step {
                 When paused, the **Debug Area** opens at the bottom.
                 The left pane shows local variables and their current values.
-                @Image(source: "debug-area-variables.png", alt: "Debug Area showing variable values")
             }
             @Step {
                 Use the debug controls to **Step Over** (F6), **Step Into** (F7),
                 and **Continue** (F5). Step Over moves to the next line without
                 entering function calls.
-                @Image(source: "debug-controls.png", alt: "Xcode step over, step into, and continue buttons")
             }
             @Step {
                 Right-click a breakpoint → **Edit Breakpoint** → add a **Condition**
                 so it only triggers when a variable equals a specific value.
-                @Image(source: "conditional-breakpoint.png", alt: "Edit Breakpoint dialog with a condition")
             }
             @Step {
                 Add `print()` statements for lightweight logging. Output appears in the
@@ -139,7 +123,6 @@
                 To set a **watchpoint** on a variable, pause at a breakpoint,
                 right-click the variable in the Debug Area → **Watch**.
                 The app will pause any time that variable's value changes.
-                @Image(source: "watchpoint.png", alt: "Watchpoint set on a variable in the Debug Area")
             }
         }
     }

@@ -17,7 +17,6 @@
             Functions let you package code so it can be reused and named clearly.
             Swift functions can accept parameters (inputs) and return values (outputs).
 
-            @Image(source: "functions-diagram.png", alt: "Diagram showing function input and output")
         }
 
         @Steps {
@@ -51,7 +50,6 @@
             Swift includes arithmetic, comparison, logical, and range operators.
             Knowing how they combine lets you write expressive conditions and calculations.
 
-            @Image(source: "operators.png", alt: "Table of Swift operators")
         }
 
         @Steps {
@@ -80,7 +78,6 @@
             A `struct` groups related data and behavior into a single named type.
             Structures are **value types** — copies are independent of the original.
 
-            @Image(source: "struct-diagram.png", alt: "Struct with properties and methods diagram")
         }
 
         @Steps {
@@ -113,7 +110,6 @@
             Arrays store ordered collections of values of the same type.
             You can access elements by index, add or remove items, and iterate through them.
 
-            @Image(source: "arrays-diagram.png", alt: "Array with indexed elements")
         }
 
         @Steps {
@@ -142,7 +138,6 @@
             Control flow determines which code runs and when.
             Swift provides `if/else`, `switch`, `for-in` loops, and `while` loops.
 
-            @Image(source: "control-flow.png", alt: "Flowchart showing if-else branching")
         }
 
         @Steps {
@@ -171,7 +166,6 @@
             `var` for variables (values that can change). The compiler infers types
             automatically, but you can also declare them explicitly.
 
-            @Image(source: "let-vs-var.png", alt: "Side-by-side let and var comparison")
         }
 
         @Steps {
@@ -203,7 +197,6 @@
             for variables and functions, **UpperCamelCase** for types, and identifiers
             must start with a letter or underscore.
 
-            @Image(source: "naming.png", alt: "Examples of camelCase and UpperCamelCase")
         }
 
         @Steps {

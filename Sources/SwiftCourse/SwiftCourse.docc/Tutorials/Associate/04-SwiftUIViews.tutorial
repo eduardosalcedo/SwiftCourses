@@ -18,7 +18,6 @@
             *how* to do things step by step. SwiftUI uses **declarative** code — you
             describe *what* the UI should look like, and SwiftUI figures out how to render it.
 
-            @Image(source: "declarative-vs-imperative.png", alt: "Comparison of imperative and declarative code")
         }
 
         @Steps {
@@ -45,7 +44,6 @@
             building blocks of SwiftUI. **Modifiers** chain onto views to change
             their appearance and behavior.
 
-            @Image(source: "content-views.png", alt: "Text, Image, and Shape views side by side")
         }
 
         @Steps {
@@ -80,7 +78,6 @@
             child views horizontally, vertically, or in layers.
             Together they form a **view hierarchy** — a tree of nested views.
 
-            @Image(source: "stack-diagrams.png", alt: "HStack, VStack, ZStack illustrated")
         }
 
         @Steps {
@@ -100,7 +97,6 @@
             @Step {
                 Open **Xcode's Canvas** (⌘⌥↩) and enable the **View Hierarchy** debugger
                 to see the nested structure visually.
-                @Image(source: "view-hierarchy-debug.png", alt: "Xcode view hierarchy debugger")
             }
         }
     }
@@ -115,7 +111,6 @@
             When user input should change what's displayed, store it in a `@State`
             property — SwiftUI automatically re-renders the view when state changes.
 
-            @Image(source: "interactive-views.png", alt: "Button, TextField, Slider, and Toggle examples")
         }
 
         @Steps {

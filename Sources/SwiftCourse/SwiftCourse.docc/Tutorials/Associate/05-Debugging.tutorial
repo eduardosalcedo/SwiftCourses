@@ -19,7 +19,6 @@
             syntactically correct, but something goes wrong during execution
             (like dividing by zero or force-unwrapping a nil Optional).
 
-            @Image(source: "error-types.png", alt: "Syntax error vs runtime error comparison")
         }
 
         @Steps {
@@ -53,14 +52,12 @@
             Xcode error messages tell you *what* went wrong and *where*.
             Learning to read them quickly is one of the most valuable skills you can develop.
 
-            @Image(source: "xcode-error-panel.png", alt: "Xcode Issue Navigator showing error messages")
         }
 
         @Steps {
             @Step {
                 Open the **Issue Navigator** (⌘5) to see all current errors and warnings
                 in one list. Errors (🔴) must be fixed; warnings (⚠️) should be reviewed.
-                @Image(source: "issue-navigator.png", alt: "Issue Navigator with errors listed")
             }
             @Step {
                 Click an error to jump to the offending line.

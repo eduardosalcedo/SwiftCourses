@@ -18,7 +18,6 @@
             belong to a single view and change over time — like a toggle, a text field
             value, or a counter. SwiftUI re-renders the view whenever `@State` changes.
 
-            @Image(source: "state-diagram.png", alt: "Diagram showing @State triggering a view update")
         }
 
         @Steps {
@@ -44,7 +43,6 @@
             owned by its parent. The `$` prefix creates a binding from a `@State` property.
             No data is duplicated — both views share the same source of truth.
 
-            @Image(source: "binding-diagram.png", alt: "Parent @State connected to child @Binding via $")
         }
 
         @Steps {
@@ -74,7 +72,6 @@
             or by your app. Common uses: `\.dismiss` (to close a sheet),
             `\.colorScheme` (light/dark mode), and `\.locale`.
 
-            @Image(source: "environment-diagram.png", alt: "Environment values flowing down the view tree")
         }
 
         @Steps {
@@ -105,7 +102,6 @@
             and SwiftUI automatically tracks which properties each view reads,
             updating only the views that depend on changed data.
 
-            @Image(source: "observable-diagram.png", alt: "@Observable class shared by multiple views")
         }
 
         @Steps {

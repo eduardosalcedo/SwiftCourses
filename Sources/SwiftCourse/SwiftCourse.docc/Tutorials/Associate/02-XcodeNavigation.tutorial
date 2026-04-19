@@ -17,14 +17,12 @@
             An Xcode project contains many file types. Knowing what each one does
             helps you navigate confidently and avoid accidental changes.
 
-            @Image(source: "xcode-project-navigator.png", alt: "Xcode Project Navigator panel")
         }
 
         @Steps {
             @Step {
                 Open Xcode and create a new **iOS App** project.
                 Name it `HelloSwift`, set Interface to **SwiftUI**, and Language to **Swift**.
-                @Image(source: "new-project.png", alt: "Xcode new project dialog")
             }
             @Step {
                 In the **Project Navigator** (⌘1), notice the key file types:
@@ -32,7 +30,6 @@
                 - `.xcassets` — Asset catalogs (images, colors, icons)
                 - `.plist` — Property list configuration files
                 - `.xcodeproj` — The project file itself
-                @Image(source: "file-types.png", alt: "Project navigator showing file types")
             }
             @Step {
                 Click `ContentView.swift`. This is a **Swift source file** — it contains
@@ -52,19 +49,16 @@
             color sets. Xcode manages multiple resolutions automatically — you just
             provide the asset and use it by name in code.
 
-            @Image(source: "asset-catalog.png", alt: "Xcode Asset Catalog editor")
         }
 
         @Steps {
             @Step {
                 Click `Assets.xcassets` in the Project Navigator to open the Asset Catalog.
                 You'll see `AccentColor` and `AppIcon` already there.
-                @Image(source: "assets-default.png", alt: "Default asset catalog contents")
             }
             @Step {
                 Drag an image file from Finder into the Asset Catalog.
                 Xcode creates a new **Image Set** and you can drop 1x, 2x, and 3x versions.
-                @Image(source: "drag-asset.png", alt: "Dragging an image into the asset catalog")
             }
             @Step {
                 Use the asset in SwiftUI with `Image("your-asset-name")`.
@@ -83,25 +77,21 @@
             The **Project Editor** (click the project name at the top of the Navigator)
             lets you configure your app's name, version, supported devices, and permissions.
 
-            @Image(source: "project-editor.png", alt: "Xcode Project Editor showing General tab")
         }
 
         @Steps {
             @Step {
                 Click the project name (blue icon) in the Navigator, then select your app **Target**.
                 The **General** tab shows your Bundle Identifier, Version, and minimum iOS version.
-                @Image(source: "target-general.png", alt: "Target General settings tab")
             }
             @Step {
                 Switch to the **Info** tab to view and edit `Info.plist` entries —
                 for example, adding a camera usage description before requesting camera access.
-                @Image(source: "info-plist.png", alt: "Info.plist entries in the project editor")
             }
             @Step {
                 Switch to the **Signing & Capabilities** tab. This is where you add
                 capabilities like Push Notifications or iCloud. For now, just confirm
                 your Team and Bundle ID are set correctly.
-                @Image(source: "signing.png", alt: "Signing and Capabilities tab")
             }
         }
     }

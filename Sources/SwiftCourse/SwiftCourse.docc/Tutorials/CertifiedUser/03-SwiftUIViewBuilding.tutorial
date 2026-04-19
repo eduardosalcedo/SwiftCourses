@@ -17,7 +17,6 @@
             Modifiers like `.frame()`, `.padding()`, `.alignment`, and `.offset()`
             give you precise control over positioning.
 
-            @Image(source: "single-view-layout.png", alt: "View positioning modifiers illustrated")
         }
 
         @Steps {
@@ -46,7 +45,6 @@
             Each view is a `struct` conforming to `View` — compose them
             by embedding one inside another.
 
-            @Image(source: "multi-view-app.png", alt: "App with multiple composed views")
         }
 
         @Steps {
@@ -76,7 +74,6 @@
             list of rows from a collection. Each item must be `Identifiable`
             so SwiftUI can track changes.
 
-            @Image(source: "list-view.png", alt: "SwiftUI List rendering a collection of rows")
         }
 
         @Steps {
@@ -105,7 +102,6 @@
             **subviews**. This improves readability and enables reuse without
             changing how the app looks.
 
-            @Image(source: "extract-subview.png", alt: "Before and after extracting a subview")
         }
 
         @Steps {
@@ -116,7 +112,6 @@
             @Step {
                 Select the view you want to extract in the Canvas, right-click →
                 **Extract Subview**. Xcode creates a new struct for you automatically.
-                @Image(source: "extract-subview-xcode.png", alt: "Xcode Extract Subview context menu")
             }
             @Step {
                 Name the new struct clearly. Pass any required data as properties.
@@ -135,7 +130,6 @@
             `NavigationLink` pushes a destination view. `.sheet()` presents
             a modal overlay. Together they cover the majority of iOS navigation patterns.
 
-            @Image(source: "navigation-patterns.png", alt: "NavigationStack push vs sheet modal diagrams")
         }
 
         @Steps {

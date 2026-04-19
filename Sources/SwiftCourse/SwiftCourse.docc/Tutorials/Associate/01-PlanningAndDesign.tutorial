@@ -18,29 +18,24 @@
             The design cycle has four phases: **Brainstorm → Plan → Prototype → Evaluate**.
             Professional developers repeat this cycle until the app is ready to ship.
 
-            @Image(source: "design-cycle.png", alt: "Design cycle diagram showing four phases")
         }
 
         @Steps {
             @Step {
                 **Brainstorm** — Write down the problem your app solves and who will use it.
                 Don't filter ideas yet; capture everything.
-                @Image(source: "brainstorm.png", alt: "Sticky notes with app ideas")
             }
             @Step {
                 **Plan** — Choose the best idea and sketch the screens your app needs.
                 Think about what data it stores and how users will navigate.
-                @Image(source: "plan-sketch.png", alt: "Paper wireframe sketch of an app")
             }
             @Step {
                 **Prototype** — Build a simple version. It doesn't have to be perfect —
                 it just needs to be testable.
-                @Image(source: "prototype.png", alt: "Basic prototype on iPhone")
             }
             @Step {
                 **Evaluate** — Test with real users. What works? What's confusing?
                 Take notes and feed them back into the next Brainstorm phase.
-                @Image(source: "evaluate.png", alt: "User testing session")
             }
         }
     }
@@ -55,7 +50,6 @@
             for keeping that data safe. This section covers what to share, what to protect,
             and the legal and ethical obligations you have.
 
-            @Image(source: "data-privacy.png", alt: "Lock icon over a smartphone")
         }
 
         @Steps {
@@ -73,7 +67,6 @@
                 **Legal & ethical impacts** — Laws like GDPR and COPPA require you to
                 disclose what data you collect and give users control over it.
                 Review Apple's App Store privacy nutrition labels as a model.
-                @Image(source: "privacy-label.png", alt: "App Store privacy nutrition label")
             }
         }
     }
@@ -88,14 +81,12 @@
             Dynamic Type, and color contrast — help millions of users. Your app should
             support them from day one.
 
-            @Image(source: "accessibility.png", alt: "Accessibility settings panel on iPhone")
         }
 
         @Steps {
             @Step {
                 Open the Accessibility Inspector in Xcode (**Xcode → Open Developer Tool → Accessibility Inspector**).
                 Run it against a SwiftUI view and note any warnings.
-                @Image(source: "accessibility-inspector.png", alt: "Accessibility Inspector tool")
             }
             @Step {
                 Add `.accessibilityLabel` to images so VoiceOver users hear a description.
@@ -104,7 +95,6 @@
             @Step {
                 Check color contrast ratios. WCAG requires at least 4.5:1 for normal text.
                 Use the Digital Color Meter app (built into macOS) to verify your palette.
-                @Image(source: "color-contrast.png", alt: "Digital Color Meter showing contrast ratio")
             }
         }
     }

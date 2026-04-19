@@ -18,7 +18,6 @@
             and the compiler enforces how types are used. Core types include
             `Int`, `Double`, `Bool`, `String`, and `Character`.
 
-            @Image(source: "swift-types.png", alt: "Table of common Swift types")
         }
 
         @Steps {
@@ -54,7 +53,6 @@
             key-value pairs for fast lookup. Both are generic types — they hold
             values of a single specified type.
 
-            @Image(source: "collections.png", alt: "Array vs Dictionary illustrated")
         }
 
         @Steps {
@@ -84,7 +82,6 @@
             exit early. The Certified User exam specifically tests **logical operators**,
             **`guard`**, and **range operators**.
 
-            @Image(source: "control-flow-cu.png", alt: "Flowchart with guard and range examples")
         }
 
         @Steps {
@@ -115,7 +112,6 @@
             **default parameter values**, **argument labels**, **anonymous parameters**
             (`_`), and return values.
 
-            @Image(source: "functions-cu.png", alt: "Function anatomy diagram with labels")
         }
 
         @Steps {
@@ -150,7 +146,6 @@
             structs are **value types** (copies are independent), classes are
             **reference types** (copies share the same instance).
 
-            @Image(source: "struct-vs-class.png", alt: "Value type vs reference type memory diagram")
         }
 
         @Steps {
@@ -184,7 +179,6 @@
             replacement for `null`. You must **unwrap** an Optional before using
             its value — the compiler enforces this.
 
-            @Image(source: "optional-box.png", alt: "Optional as a box that may or may not contain a value")
         }
 
         @Steps {
@@ -218,7 +212,6 @@
             **Shadowing** happens when an inner scope declares a variable with
             the same name as an outer scope — the inner one takes precedence.
 
-            @Image(source: "scope-diagram.png", alt: "Nested scopes diagram showing variable visibility")
         }
 
         @Steps {
