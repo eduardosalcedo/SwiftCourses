@@ -4,14 +4,8 @@
         In this tutorial you'll use `@State`, `@Binding`, `@Environment`, and `@Observable`
         to build apps where data and UI stay in sync automatically.
 
-        // Objective Domain: Certified User 3.6
-        // Certification: App Development with Swift CERTIFIED USER
     }
 
-    // --------------------------------------------------------
-    // SECTION A — @State
-    // Domain: 3.6 Use @State to share data between Views
-    // --------------------------------------------------------
     @Section(title: "@State — Local View State") {
         @ContentAndMedia {
             `@State` is the simplest data flow tool. Use it for values that
@@ -33,10 +27,6 @@
         }
     }
 
-    // --------------------------------------------------------
-    // SECTION B — @Binding
-    // Domain: 3.6 Use @Binding to share data between Views
-    // --------------------------------------------------------
     @Section(title: "@Binding — Sharing State with Children") {
         @ContentAndMedia {
             `@Binding` lets a child view read and write a `@State` variable
@@ -62,10 +52,6 @@
         }
     }
 
-    // --------------------------------------------------------
-    // SECTION C — @Environment
-    // Domain: 3.6 Use @Environment to share data between Views
-    // --------------------------------------------------------
     @Section(title: "@Environment — Reading System and App Values") {
         @ContentAndMedia {
             `@Environment` reads values injected into the view hierarchy by SwiftUI
@@ -91,10 +77,6 @@
         }
     }
 
-    // --------------------------------------------------------
-    // SECTION D — Observable
-    // Domain: 3.6 Use Observable to share data between Views
-    // --------------------------------------------------------
     @Section(title: "Observable — Shared Reference State") {
         @ContentAndMedia {
             When multiple unrelated views need to share the same data,

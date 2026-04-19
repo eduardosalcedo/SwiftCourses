@@ -4,14 +4,8 @@
         In this tutorial you'll learn how a project is structured, how to manage assets,
         and how to configure your app target.
 
-        // Objective Domain: Associate 2.1 – 2.4
-        // Certification: App Development with Swift ASSOCIATE
     }
 
-    // --------------------------------------------------------
-    // SECTION 2.1 — File Types in an Xcode Project
-    // Domain: 2.1 Differentiate between basic file types
-    // --------------------------------------------------------
     @Section(title: "Xcode File Types") {
         @ContentAndMedia {
             An Xcode project contains many file types. Knowing what each one does
@@ -39,10 +33,6 @@
         }
     }
 
-    // --------------------------------------------------------
-    // SECTION 2.2 & 2.3 — Assets
-    // Domain: 2.2 Recognize available assets | 2.3 Import and/or use an asset
-    // --------------------------------------------------------
     @Section(title: "Importing and Using Assets") {
         @ContentAndMedia {
             The **Asset Catalog** (`Assets.xcassets`) stores images, app icons, and
@@ -68,10 +58,6 @@
         }
     }
 
-    // --------------------------------------------------------
-    // SECTION 2.4 — Configuring the UI
-    // Domain: 2.4 Select appropriate actions to configure different areas of the UI
-    // --------------------------------------------------------
     @Section(title: "Configuring Project Settings") {
         @ContentAndMedia {
             The **Project Editor** (click the project name at the top of the Navigator)

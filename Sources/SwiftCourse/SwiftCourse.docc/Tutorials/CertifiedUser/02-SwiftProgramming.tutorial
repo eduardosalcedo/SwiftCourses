@@ -4,14 +4,8 @@
         types, collections, control flow, functions, structs and classes,
         optionals, and variable scope.
 
-        // Objective Domain: Certified User 2.1 – 2.7
-        // Certification: App Development with Swift CERTIFIED USER
     }
 
-    // --------------------------------------------------------
-    // SECTION 2.1 — Basic Swift Types
-    // Domain: 2.1 Declare and use basic Swift types
-    // --------------------------------------------------------
     @Section(title: "Basic Swift Types") {
         @ContentAndMedia {
             Swift is a **strongly typed** language — every value has a type,
@@ -43,10 +37,6 @@
         }
     }
 
-    // --------------------------------------------------------
-    // SECTION 2.2 — Collection Types
-    // Domain: 2.2 Manage data using collection types
-    // --------------------------------------------------------
     @Section(title: "Arrays and Dictionaries") {
         @ContentAndMedia {
             **Arrays** store ordered sequences of values. **Dictionaries** store
@@ -72,10 +62,6 @@
         }
     }
 
-    // --------------------------------------------------------
-    // SECTION 2.3 — Control Flow and Loops
-    // Domain: 2.3 Know how and when to apply control flow and loops
-    // --------------------------------------------------------
     @Section(title: "Control Flow and Loops") {
         @ContentAndMedia {
             Swift's control flow tools let you make decisions, repeat work, and
@@ -102,10 +88,6 @@
         }
     }
 
-    // --------------------------------------------------------
-    // SECTION 2.4 — Functions
-    // Domain: 2.4 Use functions
-    // --------------------------------------------------------
     @Section(title: "Functions") {
         @ContentAndMedia {
             Functions are reusable blocks of code. Swift functions support
@@ -136,10 +118,6 @@
         }
     }
 
-    // --------------------------------------------------------
-    // SECTION 2.5 — Structs and Classes
-    // Domain: 2.5 Demonstrate proper use of structs and classes
-    // --------------------------------------------------------
     @Section(title: "Structs and Classes") {
         @ContentAndMedia {
             Both `struct` and `class` group data and behavior. The key difference:
@@ -169,10 +147,6 @@
         }
     }
 
-    // --------------------------------------------------------
-    // SECTION 2.6 — Optionals
-    // Domain: 2.6 Demonstrate the use of Optional types
-    // --------------------------------------------------------
     @Section(title: "Optionals") {
         @ContentAndMedia {
             An `Optional` wraps a value that might be absent. It is Swift's safe
@@ -202,10 +176,6 @@
         }
     }
 
-    // --------------------------------------------------------
-    // SECTION 2.7 — Variable Scope and Shadowing
-    // Domain: 2.7 Evaluate variable scope and shadowing
-    // --------------------------------------------------------
     @Section(title: "Scope and Shadowing") {
         @ContentAndMedia {
             A variable's **scope** is the region of code where it exists.

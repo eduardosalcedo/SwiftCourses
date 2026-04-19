@@ -2,83 +2,62 @@
     @Intro(title: "App Development with Swift") {
         Prepare for Apple's official Swift certifications.
         This course is organized into two tracks:
-        - **Associate** — foundational computing concepts, Swift basics, and introductory SwiftUI
-        - **Certified User** — core Swift fluency, advanced SwiftUI, and real app-building skills
+        the Associate track covers foundational computing concepts, Swift basics, and introductory SwiftUI,
+        and the Certified User track covers core Swift fluency, advanced SwiftUI, and real app-building skills.
     }
 
-    // ============================================================
-    // MARK: - ASSOCIATE TRACK
-    // ============================================================
-
     @Volume(name: "Associate Certification Track") {
-        @Image(source: "associate-hero.png", alt: "Associate Certification")
-
         Aligned with the App Development with Swift Associate exam objectives (Certiport/Apple).
         Complete this track first if you are new to programming.
 
         @Chapter(name: "1 · Planning and Design") {
-            @Image(source: "chapter-planning.png", alt: "Planning and Design")
             Learn the design cycle, data privacy, and accessible design thinking.
-            @TutorialReference(tutorial: "Associate/01-PlanningAndDesign")
+            @TutorialReference(tutorial: "01-PlanningAndDesign")
         }
 
         @Chapter(name: "2 · Xcode Project Navigation") {
-            @Image(source: "chapter-xcode-nav.png", alt: "Xcode Navigation")
             Explore Xcode's project structure, file types, and asset management.
-            @TutorialReference(tutorial: "Associate/02-XcodeNavigation")
+            @TutorialReference(tutorial: "02-XcodeNavigation")
         }
 
         @Chapter(name: "3 · Swift Language Usage") {
-            @Image(source: "chapter-swift-lang.png", alt: "Swift Language")
             Write functions, use operators, build structures, manage arrays, and control flow.
-            @TutorialReference(tutorial: "Associate/03-SwiftLanguage")
+            @TutorialReference(tutorial: "03-SwiftLanguage")
         }
 
         @Chapter(name: "4 · View Building with SwiftUI") {
-            @Image(source: "chapter-swiftui.png", alt: "SwiftUI Views")
             Build declarative UIs using Content Views, Containers, modifiers, and @State.
-            @TutorialReference(tutorial: "Associate/04-SwiftUIViews")
+            @TutorialReference(tutorial: "04-SwiftUIViews")
         }
 
         @Chapter(name: "5 · Debugging") {
-            @Image(source: "chapter-debug.png", alt: "Debugging")
             Identify syntax vs runtime errors and interpret Xcode error messages.
-            @TutorialReference(tutorial: "Associate/05-Debugging")
+            @TutorialReference(tutorial: "05-Debugging")
         }
     }
 
-    // ============================================================
-    // MARK: - CERTIFIED USER TRACK
-    // ============================================================
-
     @Volume(name: "Certified User Track") {
-        @Image(source: "certifieduser-hero.png", alt: "Certified User Certification")
-
         Aligned with the App Development with Swift Certified User exam objectives (Certiport/Apple).
         Complete this track after the Associate track, or jump in if you already know Swift basics.
 
         @Chapter(name: "1 · Xcode Developer Tools") {
-            @Image(source: "chapter-xcode-tools.png", alt: "Xcode Tools")
             Navigate Xcode, run apps on Simulator and device, set breakpoints and debug.
-            @TutorialReference(tutorial: "CertifiedUser/01-XcodeDeveloperTools")
+            @TutorialReference(tutorial: "01-XcodeDeveloperTools")
         }
 
         @Chapter(name: "2 · Swift Programming Language") {
-            @Image(source: "chapter-swift-prog.png", alt: "Swift Programming")
-            Master types, collections, control flow, functions, structs/classes, optionals, and scope.
-            @TutorialReference(tutorial: "CertifiedUser/02-SwiftProgramming")
+            Master types, collections, control flow, functions, structs and classes, optionals, and scope.
+            @TutorialReference(tutorial: "02-SwiftProgramming")
         }
 
         @Chapter(name: "3 · View Building with SwiftUI") {
-            @Image(source: "chapter-swiftui-adv.png", alt: "Advanced SwiftUI")
             Position views, build multi-view apps, use List, extract subviews, and add navigation.
-            @TutorialReference(tutorial: "CertifiedUser/03-SwiftUIViewBuilding")
+            @TutorialReference(tutorial: "03-SwiftUIViewBuilding")
         }
 
         @Chapter(name: "4 · State and Data Flow") {
-            @Image(source: "chapter-state.png", alt: "State and Data Flow")
             Share data across views using @State, @Binding, @Environment, and Observable.
-            @TutorialReference(tutorial: "CertifiedUser/04-StateAndDataFlow")
+            @TutorialReference(tutorial: "04-StateAndDataFlow")
         }
     }
 }

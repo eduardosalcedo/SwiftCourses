@@ -3,14 +3,8 @@
         Bugs are a normal part of development. Knowing the *type* of error
         and how to read Xcode's error messages will save you hours of frustration.
 
-        // Objective Domain: Associate 5.1 – 5.2
-        // Certification: App Development with Swift ASSOCIATE
     }
 
-    // --------------------------------------------------------
-    // SECTION 5.1 — Syntax vs. Runtime Errors
-    // Domain: 5.1 Differentiate between syntax and run-time errors
-    // --------------------------------------------------------
     @Section(title: "Syntax vs. Runtime Errors") {
         @ContentAndMedia {
             **Syntax errors** are caught by the compiler before your app runs —
@@ -43,10 +37,6 @@
         }
     }
 
-    // --------------------------------------------------------
-    // SECTION 5.2 — Interpreting Error Messages
-    // Domain: 5.2 Interpret error messages
-    // --------------------------------------------------------
     @Section(title: "Reading Xcode Error Messages") {
         @ContentAndMedia {
             Xcode error messages tell you *what* went wrong and *where*.

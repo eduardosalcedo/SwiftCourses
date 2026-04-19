@@ -4,14 +4,8 @@
         In this tutorial you'll build Content Views, apply modifiers, create container layouts,
         and add interactive controls managed by `@State`.
 
-        // Objective Domain: Associate 4.1 – 4.7
-        // Certification: App Development with Swift ASSOCIATE
     }
 
-    // --------------------------------------------------------
-    // SECTION 4.1 — Declarative vs Imperative
-    // Domain: 4.1 Differentiate between imperative and declarative programming
-    // --------------------------------------------------------
     @Section(title: "Declarative vs. Imperative Programming") {
         @ContentAndMedia {
             UIKit (the older framework) uses **imperative** code — you tell the system
@@ -34,10 +28,6 @@
         }
     }
 
-    // --------------------------------------------------------
-    // SECTION 4.2 & 4.3 — Content Views and Modifiers
-    // Domain: 4.2 Create Content Views | 4.3 Implement Modifiers
-    // --------------------------------------------------------
     @Section(title: "Content Views and Modifiers") {
         @ContentAndMedia {
             **Content Views** like `Text`, `Image`, `Shape`, and `Color` are the
@@ -68,10 +58,6 @@
         }
     }
 
-    // --------------------------------------------------------
-    // SECTION 4.4 & 4.5 — Container Views and View Hierarchy
-    // Domain: 4.4 Create Container Views | 4.5 Explain the View hierarchy
-    // --------------------------------------------------------
     @Section(title: "Container Views and View Hierarchy") {
         @ContentAndMedia {
             `HStack`, `VStack`, and `ZStack` are **container views** that arrange
@@ -101,10 +87,6 @@
         }
     }
 
-    // --------------------------------------------------------
-    // SECTION 4.6 & 4.7 — Interactive Views and @State
-    // Domain: 4.6 Create Interactive Views | 4.7 Use @State
-    // --------------------------------------------------------
     @Section(title: "Interactive Views and @State") {
         @ContentAndMedia {
             `Button`, `TextField`, `Slider`, and `Toggle` make your app interactive.
