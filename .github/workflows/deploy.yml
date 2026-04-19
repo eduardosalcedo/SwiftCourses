@@ -29,9 +29,10 @@ jobs:
           xcodebuild docbuild \
             -scheme SwiftCourse \
             -destination 'platform=macOS' \
-            -derivedDataPath ./DerivedData 2>&1 | tail -20
+            -derivedDataPath ./DerivedData
 
-          find ./DerivedData -name "*.doccarchive" -print
+      - name: Find archive
+        run: find ./DerivedData -name "*.doccarchive"
 
       - name: Convert to static site
         run: |
