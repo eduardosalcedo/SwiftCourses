@@ -1,0 +1,52 @@
+name: Deploy DocC to GitHub Pages
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: macos-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Select Xcode
+        run: sudo xcode-select -s /Applications/Xcode.app
+
+      - name: Build DocC
+        run: |
+          xcodebuild docbuild \
+            -scheme SwiftCourse \
+            -destination 'platform=macOS' \
+            -derivedDataPath ./DerivedData \
+            OTHER_DOCC_FLAGS="--transform-for-static-hosting --hosting-base-path SwiftCourses --output-path docs"
+
+      - name: Fix permissions
+        run: chmod -R 755 docs
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: docs
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
