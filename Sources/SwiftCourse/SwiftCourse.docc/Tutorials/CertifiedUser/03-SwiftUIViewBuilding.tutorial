@@ -1,0 +1,162 @@
+@Tutorial(time: 50) {
+    @Intro(title: "View Building with SwiftUI") {
+        Build polished multi-view SwiftUI apps using layout primitives,
+        List views, extracted subviews, and NavigationStack.
+
+        // Objective Domain: Certified User 3.1 – 3.5
+        // Certification: App Development with Swift CERTIFIED USER
+    }
+
+    // --------------------------------------------------------
+    // SECTION 3.1 — Positioning a Single View
+    // Domain: 3.1 Position and/or layout a single SwiftUI View
+    // --------------------------------------------------------
+    @Section(title: "Positioning a Single View") {
+        @ContentAndMedia {
+            SwiftUI views size themselves to their content by default.
+            Modifiers like `.frame()`, `.padding()`, `.alignment`, and `.offset()`
+            give you precise control over positioning.
+
+            @Image(source: "single-view-layout.png", alt: "View positioning modifiers illustrated")
+        }
+
+        @Steps {
+            @Step {
+                Start with a plain `Text` view. Notice it sits centered in the Canvas.
+                @Code(name: "SingleView.swift", file: "cu-03-single-view-01.swift")
+            }
+            @Step {
+                Add `.frame(maxWidth: .infinity, alignment: .leading)` to pin it to the left.
+                @Code(name: "SingleView.swift", file: "cu-03-single-view-02.swift")
+            }
+            @Step {
+                Wrap it in a `VStack(alignment: .leading)` with `.padding()` to add breathing room.
+                @Code(name: "SingleView.swift", file: "cu-03-single-view-03.swift")
+            }
+        }
+    }
+
+    // --------------------------------------------------------
+    // SECTION 3.2 — Multiple Views and App Logic
+    // Domain: 3.2 Create multiple Views to implement app logic
+    // --------------------------------------------------------
+    @Section(title: "Multiple Views for App Logic") {
+        @ContentAndMedia {
+            Real apps split logic across multiple SwiftUI views.
+            Each view is a `struct` conforming to `View` — compose them
+            by embedding one inside another.
+
+            @Image(source: "multi-view-app.png", alt: "App with multiple composed views")
+        }
+
+        @Steps {
+            @Step {
+                Create a second SwiftUI view in a new file. Give it a clear, single purpose.
+                @Code(name: "DetailView.swift", file: "cu-03-multi-view-01.swift")
+            }
+            @Step {
+                Embed `DetailView` inside `ContentView` just like any built-in view.
+                @Code(name: "ContentView.swift", file: "cu-03-multi-view-02.swift")
+            }
+            @Step {
+                Pass data into `DetailView` via a stored property (a simple parameter).
+                The parent controls the value; the child just displays it.
+                @Code(name: "DetailView.swift", file: "cu-03-multi-view-03.swift")
+            }
+        }
+    }
+
+    // --------------------------------------------------------
+    // SECTION 3.3 — List Views
+    // Domain: 3.3 Use List Views to iterate through collections
+    // --------------------------------------------------------
+    @Section(title: "List Views") {
+        @ContentAndMedia {
+            `List` is SwiftUI's table view. It automatically renders a scrollable
+            list of rows from a collection. Each item must be `Identifiable`
+            so SwiftUI can track changes.
+
+            @Image(source: "list-view.png", alt: "SwiftUI List rendering a collection of rows")
+        }
+
+        @Steps {
+            @Step {
+                Define a model that conforms to `Identifiable` using a `UUID`.
+                @Code(name: "ListExample.swift", file: "cu-03-list-01.swift")
+            }
+            @Step {
+                Use `List` with `ForEach` to render one row per model item.
+                @Code(name: "ListExample.swift", file: "cu-03-list-02.swift")
+            }
+            @Step {
+                Customize each row by adding a `VStack` with a title and subtitle.
+                @Code(name: "ListExample.swift", file: "cu-03-list-03.swift")
+            }
+        }
+    }
+
+    // --------------------------------------------------------
+    // SECTION 3.4 — Extracting Subviews
+    // Domain: 3.4 Extract Subviews to simplify the structure of an overlarge View
+    // --------------------------------------------------------
+    @Section(title: "Extracting Subviews") {
+        @ContentAndMedia {
+            When a view body grows large or deeply nested, extract pieces into
+            **subviews**. This improves readability and enables reuse without
+            changing how the app looks.
+
+            @Image(source: "extract-subview.png", alt: "Before and after extracting a subview")
+        }
+
+        @Steps {
+            @Step {
+                Start with a large `ContentView` that has deeply nested layout code.
+                @Code(name: "ContentView.swift", file: "cu-03-extract-01.swift")
+            }
+            @Step {
+                Select the view you want to extract in the Canvas, right-click →
+                **Extract Subview**. Xcode creates a new struct for you automatically.
+                @Image(source: "extract-subview-xcode.png", alt: "Xcode Extract Subview context menu")
+            }
+            @Step {
+                Name the new struct clearly. Pass any required data as properties.
+                @Code(name: "ContentView.swift", file: "cu-03-extract-02.swift")
+            }
+        }
+    }
+
+    // --------------------------------------------------------
+    // SECTION 3.5 — Navigation
+    // Domain: 3.5 Create a multi-view app with NavigationStack, Links, and/or Sheets
+    // --------------------------------------------------------
+    @Section(title: "Navigation: Stack, Links, and Sheets") {
+        @ContentAndMedia {
+            `NavigationStack` provides a push/pop navigation model.
+            `NavigationLink` pushes a destination view. `.sheet()` presents
+            a modal overlay. Together they cover the majority of iOS navigation patterns.
+
+            @Image(source: "navigation-patterns.png", alt: "NavigationStack push vs sheet modal diagrams")
+        }
+
+        @Steps {
+            @Step {
+                Wrap your root view in `NavigationStack` and set a `.navigationTitle`.
+                @Code(name: "Navigation.swift", file: "cu-03-nav-01.swift")
+            }
+            @Step {
+                Add `NavigationLink` inside a `List` row to push a detail view.
+                @Code(name: "Navigation.swift", file: "cu-03-nav-02.swift")
+            }
+            @Step {
+                Use `.sheet(isPresented:)` to present a modal.
+                A `@State Bool` controls whether the sheet is visible.
+                @Code(name: "Navigation.swift", file: "cu-03-nav-03.swift")
+            }
+            @Step {
+                Dismiss the sheet by calling `dismiss()` from the environment,
+                or by setting the `@State` Bool to `false`.
+                @Code(name: "Navigation.swift", file: "cu-03-nav-04.swift")
+            }
+        }
+    }
+}

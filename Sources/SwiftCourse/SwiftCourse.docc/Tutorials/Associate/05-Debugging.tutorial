@@ -1,0 +1,79 @@
+@Tutorial(time: 20) {
+    @Intro(title: "Debugging") {
+        Bugs are a normal part of development. Knowing the *type* of error
+        and how to read Xcode's error messages will save you hours of frustration.
+
+        // Objective Domain: Associate 5.1 – 5.2
+        // Certification: App Development with Swift ASSOCIATE
+    }
+
+    // --------------------------------------------------------
+    // SECTION 5.1 — Syntax vs. Runtime Errors
+    // Domain: 5.1 Differentiate between syntax and run-time errors
+    // --------------------------------------------------------
+    @Section(title: "Syntax vs. Runtime Errors") {
+        @ContentAndMedia {
+            **Syntax errors** are caught by the compiler before your app runs —
+            they are mistakes in how you wrote the code.
+            **Runtime errors** happen while the app is running — the code is
+            syntactically correct, but something goes wrong during execution
+            (like dividing by zero or force-unwrapping a nil Optional).
+
+            @Image(source: "error-types.png", alt: "Syntax error vs runtime error comparison")
+        }
+
+        @Steps {
+            @Step {
+                This code has a **syntax error**: a missing closing parenthesis.
+                Xcode underlines it in red immediately — you can't build until it's fixed.
+                @Code(name: "SyntaxError.swift", file: "associate-05-syntax-error.swift")
+            }
+            @Step {
+                Fix the syntax error. Now the code compiles.
+                @Code(name: "SyntaxError.swift", file: "associate-05-syntax-fixed.swift")
+            }
+            @Step {
+                This code has a **runtime error**: force-unwrapping a nil Optional.
+                It compiles fine, but crashes when executed.
+                @Code(name: "RuntimeError.swift", file: "associate-05-runtime-error.swift")
+            }
+            @Step {
+                Fix it by using optional binding (`if let`) instead of force-unwrapping.
+                @Code(name: "RuntimeError.swift", file: "associate-05-runtime-fixed.swift")
+            }
+        }
+    }
+
+    // --------------------------------------------------------
+    // SECTION 5.2 — Interpreting Error Messages
+    // Domain: 5.2 Interpret error messages
+    // --------------------------------------------------------
+    @Section(title: "Reading Xcode Error Messages") {
+        @ContentAndMedia {
+            Xcode error messages tell you *what* went wrong and *where*.
+            Learning to read them quickly is one of the most valuable skills you can develop.
+
+            @Image(source: "xcode-error-panel.png", alt: "Xcode Issue Navigator showing error messages")
+        }
+
+        @Steps {
+            @Step {
+                Open the **Issue Navigator** (⌘5) to see all current errors and warnings
+                in one list. Errors (🔴) must be fixed; warnings (⚠️) should be reviewed.
+                @Image(source: "issue-navigator.png", alt: "Issue Navigator with errors listed")
+            }
+            @Step {
+                Click an error to jump to the offending line.
+                Read the message carefully — it usually names the fix.
+                For example: *"Cannot convert value of type 'Int' to expected argument type 'String'"*
+                means you passed the wrong type to a function.
+                @Code(name: "TypeError.swift", file: "associate-05-type-error.swift")
+            }
+            @Step {
+                Fix the type mismatch by converting the value with `String(myInt)`.
+                Build again (⌘B) to confirm the error is gone.
+                @Code(name: "TypeError.swift", file: "associate-05-type-fixed.swift")
+            }
+        }
+    }
+}

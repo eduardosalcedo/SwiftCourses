@@ -1,0 +1,242 @@
+@Tutorial(time: 75) {
+    @Intro(title: "Swift Programming Language") {
+        This chapter covers all Swift language domains for the Certified User exam:
+        types, collections, control flow, functions, structs and classes,
+        optionals, and variable scope.
+
+        // Objective Domain: Certified User 2.1 – 2.7
+        // Certification: App Development with Swift CERTIFIED USER
+    }
+
+    // --------------------------------------------------------
+    // SECTION 2.1 — Basic Swift Types
+    // Domain: 2.1 Declare and use basic Swift types
+    // --------------------------------------------------------
+    @Section(title: "Basic Swift Types") {
+        @ContentAndMedia {
+            Swift is a **strongly typed** language — every value has a type,
+            and the compiler enforces how types are used. Core types include
+            `Int`, `Double`, `Bool`, `String`, and `Character`.
+
+            @Image(source: "swift-types.png", alt: "Table of common Swift types")
+        }
+
+        @Steps {
+            @Step {
+                Declare values using the core types. Use `let` for constants, `var` for variables.
+                @Code(name: "Types.swift", file: "cu-02-types-01.swift")
+            }
+            @Step {
+                Use **type casting** safely with `as?` (returns an Optional) and
+                unsafely with `as!` (crashes if the cast fails — avoid in production).
+                @Code(name: "Types.swift", file: "cu-02-types-02.swift")
+            }
+            @Step {
+                Know when to use `let` vs `var`. Prefer `let` — the compiler will
+                tell you if you need `var`. Immutability prevents accidental changes.
+                @Code(name: "Types.swift", file: "cu-02-types-03.swift")
+            }
+            @Step {
+                Use `Int`, `Double`, and `String` conversions explicitly —
+                Swift never automatically converts between numeric types.
+                @Code(name: "Types.swift", file: "cu-02-types-04.swift")
+            }
+        }
+    }
+
+    // --------------------------------------------------------
+    // SECTION 2.2 — Collection Types
+    // Domain: 2.2 Manage data using collection types
+    // --------------------------------------------------------
+    @Section(title: "Arrays and Dictionaries") {
+        @ContentAndMedia {
+            **Arrays** store ordered sequences of values. **Dictionaries** store
+            key-value pairs for fast lookup. Both are generic types — they hold
+            values of a single specified type.
+
+            @Image(source: "collections.png", alt: "Array vs Dictionary illustrated")
+        }
+
+        @Steps {
+            @Step {
+                Create and mutate an **Array**. Append, insert, and remove elements.
+                @Code(name: "Collections.swift", file: "cu-02-collections-01.swift")
+            }
+            @Step {
+                Create and use a **Dictionary**. Access values by key — the result
+                is always an Optional because the key might not exist.
+                @Code(name: "Collections.swift", file: "cu-02-collections-02.swift")
+            }
+            @Step {
+                Iterate over a dictionary with `for (key, value) in` to process all pairs.
+                @Code(name: "Collections.swift", file: "cu-02-collections-03.swift")
+            }
+        }
+    }
+
+    // --------------------------------------------------------
+    // SECTION 2.3 — Control Flow and Loops
+    // Domain: 2.3 Know how and when to apply control flow and loops
+    // --------------------------------------------------------
+    @Section(title: "Control Flow and Loops") {
+        @ContentAndMedia {
+            Swift's control flow tools let you make decisions, repeat work, and
+            exit early. The Certified User exam specifically tests **logical operators**,
+            **`guard`**, and **range operators**.
+
+            @Image(source: "control-flow-cu.png", alt: "Flowchart with guard and range examples")
+        }
+
+        @Steps {
+            @Step {
+                Use logical operators `&&`, `||`, and `!` to build compound conditions.
+                @Code(name: "ControlFlow.swift", file: "cu-02-control-01.swift")
+            }
+            @Step {
+                Use **`guard`** to exit a scope early if a condition isn't met.
+                It is the idiomatic Swift way to validate preconditions.
+                @Code(name: "ControlFlow.swift", file: "cu-02-control-02.swift")
+            }
+            @Step {
+                Use **range operators**: `1...5` (closed range, includes 5) and
+                `1..<5` (half-open range, excludes 5). Use them in `for` loops and switch cases.
+                @Code(name: "ControlFlow.swift", file: "cu-02-control-03.swift")
+            }
+        }
+    }
+
+    // --------------------------------------------------------
+    // SECTION 2.4 — Functions
+    // Domain: 2.4 Use functions
+    // --------------------------------------------------------
+    @Section(title: "Functions") {
+        @ContentAndMedia {
+            Functions are reusable blocks of code. Swift functions support
+            **default parameter values**, **argument labels**, **anonymous parameters**
+            (`_`), and return values.
+
+            @Image(source: "functions-cu.png", alt: "Function anatomy diagram with labels")
+        }
+
+        @Steps {
+            @Step {
+                Define a function, add parameters, and return a value.
+                @Code(name: "Functions.swift", file: "cu-02-functions-01.swift")
+            }
+            @Step {
+                Use **external (argument) labels** to make call sites read like
+                natural language, and **internal names** for use inside the body.
+                @Code(name: "Functions.swift", file: "cu-02-functions-02.swift")
+            }
+            @Step {
+                Use `_` as the external label to suppress it at the call site.
+                @Code(name: "Functions.swift", file: "cu-02-functions-03.swift")
+            }
+            @Step {
+                Add **default parameter values** so callers can omit them when the
+                default is appropriate.
+                @Code(name: "Functions.swift", file: "cu-02-functions-04.swift")
+            }
+        }
+    }
+
+    // --------------------------------------------------------
+    // SECTION 2.5 — Structs and Classes
+    // Domain: 2.5 Demonstrate proper use of structs and classes
+    // --------------------------------------------------------
+    @Section(title: "Structs and Classes") {
+        @ContentAndMedia {
+            Both `struct` and `class` group data and behavior. The key difference:
+            structs are **value types** (copies are independent), classes are
+            **reference types** (copies share the same instance).
+
+            @Image(source: "struct-vs-class.png", alt: "Value type vs reference type memory diagram")
+        }
+
+        @Steps {
+            @Step {
+                Define a `struct` with stored properties and a custom initializer.
+                @Code(name: "StructsClasses.swift", file: "cu-02-structs-01.swift")
+            }
+            @Step {
+                Define a `class`. Notice it needs a custom `init` (no auto memberwise initializer).
+                @Code(name: "StructsClasses.swift", file: "cu-02-class-01.swift")
+            }
+            @Step {
+                Demonstrate value semantics: copying a struct creates an independent copy.
+                Copying a class shares the same reference.
+                @Code(name: "StructsClasses.swift", file: "cu-02-value-vs-ref.swift")
+            }
+            @Step {
+                Add a **property observer** with `didSet` to react when a property changes.
+                @Code(name: "StructsClasses.swift", file: "cu-02-property-observers.swift")
+            }
+        }
+    }
+
+    // --------------------------------------------------------
+    // SECTION 2.6 — Optionals
+    // Domain: 2.6 Demonstrate the use of Optional types
+    // --------------------------------------------------------
+    @Section(title: "Optionals") {
+        @ContentAndMedia {
+            An `Optional` wraps a value that might be absent. It is Swift's safe
+            replacement for `null`. You must **unwrap** an Optional before using
+            its value — the compiler enforces this.
+
+            @Image(source: "optional-box.png", alt: "Optional as a box that may or may not contain a value")
+        }
+
+        @Steps {
+            @Step {
+                Declare an Optional with `?`. An unwrapped Optional is `nil` by default.
+                @Code(name: "Optionals.swift", file: "cu-02-optionals-01.swift")
+            }
+            @Step {
+                Use **`if let`** (Optional binding) to safely unwrap and use the value.
+                @Code(name: "Optionals.swift", file: "cu-02-optionals-02.swift")
+            }
+            @Step {
+                Use **`guard let`** to unwrap and exit early if nil.
+                @Code(name: "Optionals.swift", file: "cu-02-optionals-03.swift")
+            }
+            @Step {
+                Use **Optional chaining** with `?.` to call methods or access properties
+                on an Optional without crashing — the result is another Optional.
+                @Code(name: "Optionals.swift", file: "cu-02-optionals-04.swift")
+            }
+        }
+    }
+
+    // --------------------------------------------------------
+    // SECTION 2.7 — Variable Scope and Shadowing
+    // Domain: 2.7 Evaluate variable scope and shadowing
+    // --------------------------------------------------------
+    @Section(title: "Scope and Shadowing") {
+        @ContentAndMedia {
+            A variable's **scope** is the region of code where it exists.
+            **Shadowing** happens when an inner scope declares a variable with
+            the same name as an outer scope — the inner one takes precedence.
+
+            @Image(source: "scope-diagram.png", alt: "Nested scopes diagram showing variable visibility")
+        }
+
+        @Steps {
+            @Step {
+                Variables declared inside `{}` braces are local to that scope.
+                Attempting to use them outside causes a compile error.
+                @Code(name: "Scope.swift", file: "cu-02-scope-01.swift")
+            }
+            @Step {
+                Intentional shadowing in `if let` is idiomatic Swift —
+                reusing the same name for the unwrapped value is clear and concise.
+                @Code(name: "Scope.swift", file: "cu-02-scope-02.swift")
+            }
+            @Step {
+                Accidental shadowing in nested loops or closures can cause subtle bugs.
+                Recognize the pattern and rename to avoid ambiguity.
+                @Code(name: "Scope.swift", file: "cu-02-scope-03.swift")
+            }
+        }
+    }
+}
