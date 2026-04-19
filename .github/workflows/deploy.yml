@@ -29,7 +29,8 @@ jobs:
           xcodebuild docbuild \
             -scheme SwiftCourse \
             -destination 'platform=macOS' \
-            -derivedDataPath ./DerivedData
+            -derivedDataPath ./DerivedData \
+            OTHER_DOCC_FLAGS="--warnings-as-errors false"
 
       - name: Find archive
         run: find ./DerivedData -name "*.doccarchive"
