@@ -3,7 +3,6 @@
         Xcode is the IDE you'll use to build every Swift app.
         In this tutorial you'll learn how a project is structured, how to manage assets,
         and how to configure your app target.
-
     }
 
     @Section(title: "Xcode File Types") {
@@ -11,22 +10,21 @@
             An Xcode project contains many file types. Knowing what each one does
             helps you navigate confidently and avoid accidental changes.
 
+            @Image(source: "chapter-xcode-nav.png", alt: "Xcode Project Navigator panel")
         }
 
         @Steps {
             @Step {
-                Open Xcode and create a new **iOS App** project.
-                Name it `HelloSwift`, set Interface to **SwiftUI**, and Language to **Swift**.
+                Open Xcode and create a new iOS App project.
+                Name it HelloSwift, set Interface to SwiftUI, and Language to Swift.
             }
             @Step {
-                In the **Project Navigator** (⌘1), notice the key file types:
-                - `.swift` — Swift source code files
-                - `.xcassets` — Asset catalogs (images, colors, icons)
-                - `.plist` — Property list configuration files
-                - `.xcodeproj` — The project file itself
+                In the Project Navigator (Command+1), notice the key file types:
+                .swift files are Swift source code, .xcassets is the Asset Catalog,
+                .plist files are configuration files, and .xcodeproj is the project file.
             }
             @Step {
-                Click `ContentView.swift`. This is a **Swift source file** — it contains
+                Click ContentView.swift. This is a Swift source file — it contains
                 the SwiftUI code that renders your app's first screen.
                 @Code(name: "ContentView.swift", file: "associate-02-content-view.swift")
             }
@@ -35,24 +33,23 @@
 
     @Section(title: "Importing and Using Assets") {
         @ContentAndMedia {
-            The **Asset Catalog** (`Assets.xcassets`) stores images, app icons, and
+            The Asset Catalog (Assets.xcassets) stores images, app icons, and
             color sets. Xcode manages multiple resolutions automatically — you just
             provide the asset and use it by name in code.
-
         }
 
         @Steps {
             @Step {
-                Click `Assets.xcassets` in the Project Navigator to open the Asset Catalog.
-                You'll see `AccentColor` and `AppIcon` already there.
+                Click Assets.xcassets in the Project Navigator to open the Asset Catalog.
+                You'll see AccentColor and AppIcon already there.
             }
             @Step {
                 Drag an image file from Finder into the Asset Catalog.
-                Xcode creates a new **Image Set** and you can drop 1x, 2x, and 3x versions.
+                Xcode creates a new Image Set and you can drop 1x, 2x, and 3x versions.
             }
             @Step {
-                Use the asset in SwiftUI with `Image("your-asset-name")`.
-                The string must match the asset name exactly (case-sensitive).
+                Use the asset in SwiftUI with Image("your-asset-name").
+                The string must match the asset name exactly and is case-sensitive.
                 @Code(name: "UseAsset.swift", file: "associate-02-use-asset.swift")
             }
         }
@@ -60,23 +57,22 @@
 
     @Section(title: "Configuring Project Settings") {
         @ContentAndMedia {
-            The **Project Editor** (click the project name at the top of the Navigator)
-            lets you configure your app's name, version, supported devices, and permissions.
-
+            The Project Editor lets you configure your app's name, version,
+            supported devices, and permissions.
         }
 
         @Steps {
             @Step {
-                Click the project name (blue icon) in the Navigator, then select your app **Target**.
-                The **General** tab shows your Bundle Identifier, Version, and minimum iOS version.
+                Click the project name in the Navigator, then select your app Target.
+                The General tab shows your Bundle Identifier, Version, and minimum iOS version.
             }
             @Step {
-                Switch to the **Info** tab to view and edit `Info.plist` entries —
+                Switch to the Info tab to view and edit Info.plist entries —
                 for example, adding a camera usage description before requesting camera access.
             }
             @Step {
-                Switch to the **Signing & Capabilities** tab. This is where you add
-                capabilities like Push Notifications or iCloud. For now, just confirm
+                Switch to the Signing and Capabilities tab. This is where you add
+                capabilities like Push Notifications or iCloud. For now, confirm
                 your Team and Bundle ID are set correctly.
             }
         }

@@ -1,27 +1,24 @@
 @Tutorial(time: 40) {
     @Intro(title: "State and Data Flow") {
         SwiftUI's data flow tools let you share state across views safely and efficiently.
-        In this tutorial you'll use `@State`, `@Binding`, `@Environment`, and `@Observable`
-        to build apps where data and UI stay in sync automatically.
-
+        In this tutorial you'll use @State, @Binding, @Environment, and @Observable.
     }
 
     @Section(title: "@State — Local View State") {
         @ContentAndMedia {
-            `@State` is the simplest data flow tool. Use it for values that
-            belong to a single view and change over time — like a toggle, a text field
-            value, or a counter. SwiftUI re-renders the view whenever `@State` changes.
+            Use @State for values that belong to a single view and change over time.
+            SwiftUI re-renders the view whenever @State changes.
 
+            @Image(source: "state-diagram.png", alt: "@State triggering a view update")
         }
 
         @Steps {
             @Step {
-                Create a `@State` variable to track a counter. Display it in `Text`.
+                Create a @State variable to track a counter. Display it in Text.
                 @Code(name: "StateExample.swift", file: "cu-04-state-01.swift")
             }
             @Step {
-                Add a `Button` that mutates the `@State` variable. Tap it in the preview
-                to watch the count update live.
+                Add a Button that mutates the @State variable.
                 @Code(name: "StateExample.swift", file: "cu-04-state-02.swift")
             }
         }
@@ -29,24 +26,23 @@
 
     @Section(title: "@Binding — Sharing State with Children") {
         @ContentAndMedia {
-            `@Binding` lets a child view read and write a `@State` variable
-            owned by its parent. The `$` prefix creates a binding from a `@State` property.
-            No data is duplicated — both views share the same source of truth.
+            @Binding lets a child view read and write a @State variable owned by its parent.
+            Use the $ prefix to create a binding from a @State property.
 
+            @Image(source: "binding-diagram.png", alt: "Parent @State connected to child @Binding")
         }
 
         @Steps {
             @Step {
-                Create a child view with a `@Binding` property instead of a regular stored property.
+                Create a child view with a @Binding property.
                 @Code(name: "BindingExample.swift", file: "cu-04-binding-01.swift")
             }
             @Step {
-                In the parent, pass the binding using the `$` prefix on the `@State` variable.
+                In the parent, pass the binding using the $ prefix.
                 @Code(name: "BindingExample.swift", file: "cu-04-binding-02.swift")
             }
             @Step {
-                Run the preview. Notice that changes made in the child view update
-                the parent's `@State` — they share one source of truth.
+                Changes made in the child update the parent's @State automatically.
                 @Code(name: "BindingExample.swift", file: "cu-04-binding-03.swift")
             }
         }
@@ -54,24 +50,21 @@
 
     @Section(title: "@Environment — Reading System and App Values") {
         @ContentAndMedia {
-            `@Environment` reads values injected into the view hierarchy by SwiftUI
-            or by your app. Common uses: `\.dismiss` (to close a sheet),
-            `\.colorScheme` (light/dark mode), and `\.locale`.
-
+            @Environment reads values injected into the view hierarchy by SwiftUI or your app.
+            Common uses: \.dismiss, \.colorScheme, and \.locale.
         }
 
         @Steps {
             @Step {
-                Use `@Environment(\.dismiss)` inside a sheet to add a dismiss button.
+                Use @Environment(\.dismiss) inside a sheet to add a dismiss button.
                 @Code(name: "EnvironmentExample.swift", file: "cu-04-environment-01.swift")
             }
             @Step {
-                Use `@Environment(\.colorScheme)` to adapt your UI to light and dark mode.
+                Use @Environment(\.colorScheme) to adapt your UI to light and dark mode.
                 @Code(name: "EnvironmentExample.swift", file: "cu-04-environment-02.swift")
             }
             @Step {
-                Inject a custom value into the environment with `.environment()` modifier
-                and read it in a deeply nested child view without passing it explicitly.
+                Inject a custom value with .environment() and read it in a nested child view.
                 @Code(name: "EnvironmentExample.swift", file: "cu-04-environment-03.swift")
             }
         }
@@ -79,31 +72,25 @@
 
     @Section(title: "Observable — Shared Reference State") {
         @ContentAndMedia {
-            When multiple unrelated views need to share the same data,
-            use the `@Observable` macro (Swift 5.9+). Mark a class `@Observable`
-            and SwiftUI automatically tracks which properties each view reads,
-            updating only the views that depend on changed data.
-
+            When multiple views need to share the same data, use the @Observable macro.
+            SwiftUI automatically tracks which properties each view reads.
         }
 
         @Steps {
             @Step {
-                Create a model class marked with `@Observable`. Store your app's data here.
+                Create a model class marked with @Observable.
                 @Code(name: "ObservableExample.swift", file: "cu-04-observable-01.swift")
             }
             @Step {
-                Create an instance of the model at the top of your view hierarchy
-                and pass it as an environment object with `.environment()`.
+                Create an instance and pass it via .environment() at the top of your hierarchy.
                 @Code(name: "ObservableExample.swift", file: "cu-04-observable-02.swift")
             }
             @Step {
-                In any child view, use `@Environment` to access the shared model.
-                Mutate it directly — all views that read the changed property update automatically.
+                In any child view, use @Environment to access the shared model.
                 @Code(name: "ObservableExample.swift", file: "cu-04-observable-03.swift")
             }
             @Step {
-                Run the app. Update data from one view and watch a sibling view reflect
-                the change instantly — no manual notifications required.
+                Update data from one view and watch sibling views reflect the change instantly.
                 @Code(name: "ObservableExample.swift", file: "cu-04-observable-04.swift")
             }
         }

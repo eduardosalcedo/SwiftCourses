@@ -2,16 +2,16 @@
     @Intro(title: "View Building with SwiftUI") {
         SwiftUI lets you describe your app's UI using Swift code — no storyboards required.
         In this tutorial you'll build Content Views, apply modifiers, create container layouts,
-        and add interactive controls managed by `@State`.
-
+        and add interactive controls managed by @State.
     }
 
     @Section(title: "Declarative vs. Imperative Programming") {
         @ContentAndMedia {
-            UIKit (the older framework) uses **imperative** code — you tell the system
-            *how* to do things step by step. SwiftUI uses **declarative** code — you
-            describe *what* the UI should look like, and SwiftUI figures out how to render it.
+            UIKit uses imperative code — you tell the system how to do things step by step.
+            SwiftUI uses declarative code — you describe what the UI should look like,
+            and SwiftUI figures out how to render it.
 
+            @Image(source: "declarative-vs-imperative.png", alt: "Comparison of imperative and declarative code")
         }
 
         @Steps {
@@ -30,29 +30,27 @@
 
     @Section(title: "Content Views and Modifiers") {
         @ContentAndMedia {
-            **Content Views** like `Text`, `Image`, `Shape`, and `Color` are the
-            building blocks of SwiftUI. **Modifiers** chain onto views to change
-            their appearance and behavior.
-
+            Content Views like Text, Image, Shape, and Color are the building blocks of SwiftUI.
+            Modifiers chain onto views to change their appearance and behavior.
         }
 
         @Steps {
             @Step {
-                Add a `Text` view to display a string.
+                Add a Text view to display a string.
                 @Code(name: "ContentViews.swift", file: "associate-04-content-01.swift")
             }
             @Step {
-                Chain modifiers: `.font()`, `.foregroundColor()`, `.padding()`.
+                Chain modifiers: .font(), .foregroundColor(), .padding().
                 Modifiers return a new view — order matters.
                 @Code(name: "ContentViews.swift", file: "associate-04-content-02.swift")
             }
             @Step {
-                Add an `Image` view using an asset name, then make it resizable
-                and set a fixed frame with `.resizable()` and `.frame()`.
+                Add an Image view using an asset name, then make it resizable
+                with .resizable() and set a fixed frame with .frame().
                 @Code(name: "ContentViews.swift", file: "associate-04-content-03.swift")
             }
             @Step {
-                Add a `Rectangle()` shape with a `.fill()` and `.background()` modifier.
+                Add a Rectangle shape with a .fill() and .background() modifier.
                 @Code(name: "ContentViews.swift", file: "associate-04-content-04.swift")
             }
         }
@@ -60,58 +58,52 @@
 
     @Section(title: "Container Views and View Hierarchy") {
         @ContentAndMedia {
-            `HStack`, `VStack`, and `ZStack` are **container views** that arrange
+            HStack, VStack, and ZStack are container views that arrange
             child views horizontally, vertically, or in layers.
-            Together they form a **view hierarchy** — a tree of nested views.
-
+            Together they form a view hierarchy — a tree of nested views.
         }
 
         @Steps {
             @Step {
-                Use `VStack` to arrange views vertically. Add `Spacer()` to push
-                views apart.
+                Use VStack to arrange views vertically. Add Spacer() to push views apart.
                 @Code(name: "Stacks.swift", file: "associate-04-stacks-01.swift")
             }
             @Step {
-                Nest an `HStack` inside the `VStack` to place two views side by side.
+                Nest an HStack inside the VStack to place two views side by side.
                 @Code(name: "Stacks.swift", file: "associate-04-stacks-02.swift")
             }
             @Step {
-                Use `ZStack` to layer views on top of each other — great for overlays.
+                Use ZStack to layer views on top of each other — great for overlays.
                 @Code(name: "Stacks.swift", file: "associate-04-stacks-03.swift")
-            }
-            @Step {
-                Open **Xcode's Canvas** (⌘⌥↩) and enable the **View Hierarchy** debugger
-                to see the nested structure visually.
             }
         }
     }
 
     @Section(title: "Interactive Views and @State") {
         @ContentAndMedia {
-            `Button`, `TextField`, `Slider`, and `Toggle` make your app interactive.
-            When user input should change what's displayed, store it in a `@State`
+            Button, TextField, Slider, and Toggle make your app interactive.
+            When user input should change what's displayed, store it in a @State
             property — SwiftUI automatically re-renders the view when state changes.
 
+            @Image(source: "state-diagram.png", alt: "@State triggering a view update")
         }
 
         @Steps {
             @Step {
-                Add a `@State` variable to track a `Bool`. Use it to toggle a `Text` label.
+                Add a @State variable to track a Bool. Use it to toggle a Text label.
                 @Code(name: "InteractiveViews.swift", file: "associate-04-interactive-01.swift")
             }
             @Step {
-                Add a `Button` that flips the `@State` variable when tapped.
+                Add a Button that flips the @State variable when tapped.
                 @Code(name: "InteractiveViews.swift", file: "associate-04-interactive-02.swift")
             }
             @Step {
-                Replace the `Bool` with a `String`. Bind it to a `TextField` so the
+                Replace the Bool with a String. Bind it to a TextField so the
                 view updates as the user types.
                 @Code(name: "InteractiveViews.swift", file: "associate-04-interactive-03.swift")
             }
             @Step {
-                Add a `Toggle` bound to a `Bool` state and a `Slider` bound to a `Double`.
-                Watch the Canvas update live as you edit.
+                Add a Toggle bound to a Bool state and a Slider bound to a Double.
                 @Code(name: "InteractiveViews.swift", file: "associate-04-interactive-04.swift")
             }
         }

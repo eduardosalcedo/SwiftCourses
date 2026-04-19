@@ -3,44 +3,38 @@
         Xcode is a professional-grade IDE with powerful tools for building, running,
         and debugging iOS apps. In this tutorial you'll master the Xcode interface,
         run apps on Simulator and a real device, and use breakpoints to track down bugs.
-
     }
 
     @Section(title: "Navigating Xcode") {
         @ContentAndMedia {
             Xcode's workspace is divided into five key areas:
-            **Navigator** (left), **Editor** (center), **Inspector** (right),
-            **Toolbar** (top), and **Debug Area** (bottom).
-            Knowing each area makes you faster and more confident.
+            Navigator on the left, Editor in the center, Inspector on the right,
+            Toolbar at the top, and Debug Area at the bottom.
 
+            @Image(source: "chapter-xcode-tools.png", alt: "Xcode interface areas labeled")
         }
 
         @Steps {
             @Step {
-                Open your `HelloSwift` project. Press **⌘1** to open the Project Navigator.
+                Open your project. Press Command+1 to open the Project Navigator.
                 This is where you browse all files in your project.
             }
             @Step {
-                Press **⌘0** to hide/show the Navigator. Press **⌥⌘0** to hide/show the Inspector.
-                Use these to maximize your editing space.
+                Press Command+0 to hide/show the Navigator.
+                Press Option+Command+0 to hide/show the Inspector.
             }
             @Step {
-                Click `ContentView.swift` to open it in the **Editor**.
-                Press **⌘⌥↩** to show the **Canvas** (SwiftUI preview) on the right.
+                Click ContentView.swift to open it in the Editor.
+                Press Command+Option+Return to show the Canvas (SwiftUI preview).
                 @Code(name: "ContentView.swift", file: "cu-01-content-view.swift")
             }
             @Step {
-                With a SwiftUI file open, open the **Library** (+ button in the toolbar
-                or **⇧⌘L**) to browse and drag in pre-built views and modifiers.
+                Use the Library (+ button or Shift+Command+L) to browse and drag in
+                pre-built views and modifiers.
             }
             @Step {
-                Use **Interface Builder** by adding a `.storyboard` file or by
-                clicking **Open in Interface Builder** if present.
-                For SwiftUI projects, the Canvas *is* the visual editor.
-            }
-            @Step {
-                Press **⌘⇧0** (or click **Help → Developer Documentation**) to open
-                the built-in documentation browser. Search for any Swift type or modifier.
+                Press Shift+Command+0 to open the built-in documentation browser.
+                Search for any Swift type or modifier.
             }
         }
     }
@@ -48,28 +42,25 @@
     @Section(title: "Building and Running Your App") {
         @ContentAndMedia {
             Running your app lets you see it in action. You can run on the
-            **iOS Simulator** (no device needed) or on a **real iPhone or iPad**
-            (requires an Apple ID and developer profile).
-
+            iOS Simulator or on a real iPhone or iPad.
         }
 
         @Steps {
             @Step {
-                Click the **scheme/destination** selector in the Toolbar (next to the ▶ button).
-                Choose an **iPhone Simulator** model from the list.
+                Click the scheme/destination selector in the Toolbar next to the play button.
+                Choose an iPhone Simulator model from the list.
             }
             @Step {
-                Press **⌘R** (or click ▶) to build and run.
-                The Simulator launches and your app appears. Try interacting with it.
+                Press Command+R to build and run.
+                The Simulator launches and your app appears.
             }
             @Step {
-                To run on a **real device**, connect your iPhone via USB.
-                Select it from the destination picker. If prompted, trust the Mac on your iPhone
-                and add your Apple ID under **Xcode → Settings → Accounts**.
+                To run on a real device, connect your iPhone via USB.
+                Select it from the destination picker and confirm your Apple ID is added
+                under Xcode → Settings → Accounts.
             }
             @Step {
-                Press **⌘R**. Xcode signs the app and installs it on your device.
-                The app icon appears on your iPhone's Home Screen.
+                Press Command+R. Xcode signs the app and installs it on your device.
             }
         }
     }
@@ -78,36 +69,28 @@
         @ContentAndMedia {
             When your app behaves unexpectedly, Xcode's debugger helps you
             pause execution, inspect values, and step through code line by line.
-
         }
 
         @Steps {
             @Step {
-                Click in the **gutter** (the grey area to the left of line numbers)
-                to set a **breakpoint**. A blue arrow appears. Run the app — it pauses here.
+                Click in the gutter to the left of line numbers to set a breakpoint.
+                A blue arrow appears. Run the app — it pauses here.
             }
             @Step {
-                When paused, the **Debug Area** opens at the bottom.
+                When paused, the Debug Area opens at the bottom.
                 The left pane shows local variables and their current values.
             }
             @Step {
-                Use the debug controls to **Step Over** (F6), **Step Into** (F7),
-                and **Continue** (F5). Step Over moves to the next line without
-                entering function calls.
+                Use the debug controls to Step Over (F6), Step Into (F7),
+                and Continue (F5).
             }
             @Step {
-                Right-click a breakpoint → **Edit Breakpoint** → add a **Condition**
-                so it only triggers when a variable equals a specific value.
-            }
-            @Step {
-                Add `print()` statements for lightweight logging. Output appears in the
-                **Console** (bottom-right of the Debug Area). This is the fastest way
-                to verify values without pausing execution.
+                Add print() statements for lightweight logging. Output appears in the Console.
                 @Code(name: "Logging.swift", file: "cu-01-logging.swift")
             }
             @Step {
-                To set a **watchpoint** on a variable, pause at a breakpoint,
-                right-click the variable in the Debug Area → **Watch**.
+                To set a watchpoint, pause at a breakpoint, right-click the variable
+                in the Debug Area and choose Watch.
                 The app will pause any time that variable's value changes.
             }
         }

@@ -3,29 +3,27 @@
         Swift is a safe, expressive, and fast programming language.
         In this tutorial you'll write functions, use operators, build structures,
         work with arrays, control program flow, and follow Swift naming conventions.
-
     }
 
     @Section(title: "Writing and Calling Functions") {
         @ContentAndMedia {
             Functions let you package code so it can be reused and named clearly.
-            Swift functions can accept parameters (inputs) and return values (outputs).
+            Swift functions can accept parameters and return values.
 
+            @Image(source: "functions-diagram.png", alt: "Anatomy of a Swift function")
         }
 
         @Steps {
             @Step {
-                Declare a simple function using the `func` keyword.
+                Declare a simple function using the func keyword.
                 @Code(name: "Functions.swift", file: "associate-03-functions-01.swift")
             }
             @Step {
-                Add a **parameter** so the function can accept input.
-                The label before the colon is the argument label used at the call site;
-                the name after is used inside the function body.
+                Add a parameter so the function can accept input.
                 @Code(name: "Functions.swift", file: "associate-03-functions-02.swift")
             }
             @Step {
-                Add a **return type** with `->` and use the `return` keyword.
+                Add a return type with -> and use the return keyword.
                 @Code(name: "Functions.swift", file: "associate-03-functions-03.swift")
             }
             @Step {
@@ -39,21 +37,20 @@
         @ContentAndMedia {
             Swift includes arithmetic, comparison, logical, and range operators.
             Knowing how they combine lets you write expressive conditions and calculations.
-
         }
 
         @Steps {
             @Step {
-                Use arithmetic operators: `+`, `-`, `*`, `/`, `%` (remainder).
+                Use arithmetic operators: +, -, *, /, and % for remainder.
                 @Code(name: "Operators.swift", file: "associate-03-operators-01.swift")
             }
             @Step {
-                Use comparison operators: `==`, `!=`, `<`, `>`, `<=`, `>=`.
-                These return `Bool` values and are the foundation of conditions.
+                Use comparison operators: ==, !=, <, >, <=, >=.
+                These return Bool values and are the foundation of conditions.
                 @Code(name: "Operators.swift", file: "associate-03-operators-02.swift")
             }
             @Step {
-                Use logical operators: `&&` (AND), `||` (OR), `!` (NOT).
+                Use logical operators: && for AND, || for OR, and ! for NOT.
                 @Code(name: "Operators.swift", file: "associate-03-operators-03.swift")
             }
         }
@@ -61,23 +58,24 @@
 
     @Section(title: "Structures") {
         @ContentAndMedia {
-            A `struct` groups related data and behavior into a single named type.
-            Structures are **value types** — copies are independent of the original.
+            A struct groups related data and behavior into a single named type.
+            Structures are value types — copies are independent of the original.
 
+            @Image(source: "struct-diagram.png", alt: "Struct with properties and methods")
         }
 
         @Steps {
             @Step {
-                Declare a structure and define its **stored properties**.
+                Declare a structure and define its stored properties.
                 @Code(name: "Structs.swift", file: "associate-03-structs-01.swift")
             }
             @Step {
-                Swift auto-generates a **memberwise initializer** for structures.
+                Swift auto-generates a memberwise initializer for structures.
                 Create an instance by passing values for each property.
                 @Code(name: "Structs.swift", file: "associate-03-structs-02.swift")
             }
             @Step {
-                Add a **method** — a function defined inside the struct.
+                Add a method — a function defined inside the struct.
                 @Code(name: "Structs.swift", file: "associate-03-structs-03.swift")
             }
             @Step {
@@ -92,6 +90,7 @@
             Arrays store ordered collections of values of the same type.
             You can access elements by index, add or remove items, and iterate through them.
 
+            @Image(source: "arrays-diagram.png", alt: "Array with indexed elements")
         }
 
         @Steps {
@@ -100,12 +99,11 @@
                 @Code(name: "Arrays.swift", file: "associate-03-arrays-01.swift")
             }
             @Step {
-                Access and modify elements using their zero-based **index**.
+                Access and modify elements using their zero-based index.
                 @Code(name: "Arrays.swift", file: "associate-03-arrays-02.swift")
             }
             @Step {
-                Use common array properties and methods: `.count`, `.isEmpty`,
-                `.append()`, `.remove(at:)`, and `.contains()`.
+                Use common array properties and methods: .count, .isEmpty, .append(), .remove(at:), and .contains().
                 @Code(name: "Arrays.swift", file: "associate-03-arrays-03.swift")
             }
         }
@@ -114,21 +112,20 @@
     @Section(title: "Control Flow") {
         @ContentAndMedia {
             Control flow determines which code runs and when.
-            Swift provides `if/else`, `switch`, `for-in` loops, and `while` loops.
-
+            Swift provides if/else, switch, for-in loops, and while loops.
         }
 
         @Steps {
             @Step {
-                Write a `for-in` loop to iterate over a range and an array.
+                Write a for-in loop to iterate over a range and an array.
                 @Code(name: "ControlFlow.swift", file: "associate-03-control-01.swift")
             }
             @Step {
-                Use an `if/else` conditional to branch based on a condition.
+                Use an if/else conditional to branch based on a condition.
                 @Code(name: "ControlFlow.swift", file: "associate-03-control-02.swift")
             }
             @Step {
-                Use a `while` loop when you don't know the iteration count in advance.
+                Use a while loop when you don't know the iteration count in advance.
                 @Code(name: "ControlFlow.swift", file: "associate-03-control-03.swift")
             }
         }
@@ -136,26 +133,21 @@
 
     @Section(title: "Constants, Variables, and Types") {
         @ContentAndMedia {
-            Swift uses `let` for constants (values that don't change) and
-            `var` for variables (values that can change). The compiler infers types
-            automatically, but you can also declare them explicitly.
-
+            Swift uses let for constants and var for variables.
+            The compiler infers types automatically, but you can also declare them explicitly.
         }
 
         @Steps {
             @Step {
-                Declare a constant with `let` and a variable with `var`.
-                Try to change the constant — the compiler will stop you.
+                Declare a constant with let and a variable with var.
                 @Code(name: "Types.swift", file: "associate-03-types-01.swift")
             }
             @Step {
-                Swift uses **type inference** — the compiler figures out the type
-                from the assigned value.
+                Swift uses type inference — the compiler figures out the type from the assigned value.
                 @Code(name: "Types.swift", file: "associate-03-types-02.swift")
             }
             @Step {
-                Use **explicit typing** with a type annotation when you need clarity
-                or want to declare a variable before assigning a value.
+                Use explicit typing with a type annotation when you need clarity.
                 @Code(name: "Types.swift", file: "associate-03-types-03.swift")
             }
         }
@@ -163,21 +155,19 @@
 
     @Section(title: "Swift Naming Conventions") {
         @ContentAndMedia {
-            Good names make code readable. Swift has clear conventions: **camelCase**
-            for variables and functions, **UpperCamelCase** for types, and identifiers
-            must start with a letter or underscore.
-
+            Good names make code readable. Swift uses camelCase for variables and functions,
+            and UpperCamelCase for types.
         }
 
         @Steps {
             @Step {
-                Use **lowerCamelCase** for variables, constants, and functions.
-                Use **UpperCamelCase** (also called PascalCase) for types and structs.
+                Use lowerCamelCase for variables, constants, and functions.
+                Use UpperCamelCase for types and structs.
                 @Code(name: "Naming.swift", file: "associate-03-naming-01.swift")
             }
             @Step {
                 Swift identifiers can contain letters, digits, and underscores,
-                but must **not** start with a digit. Avoid single-letter names outside of loops.
+                but must not start with a digit.
                 @Code(name: "Naming.swift", file: "associate-03-naming-02.swift")
             }
         }
